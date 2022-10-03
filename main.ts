@@ -12,9 +12,11 @@ input.onButtonPressed(Button.B, function () {
 input.onGesture(Gesture.Shake, function () {
     if (Guess == Number2) {
         basic.showIcon(IconNames.Yes)
+        basic.pause(1000)
         basic.showString("CORRECT")
     } else if (Guess != Number2) {
         basic.showIcon(IconNames.No)
+        basic.pause(1000)
         basic.showString("INCORRECT")
     }
 })
