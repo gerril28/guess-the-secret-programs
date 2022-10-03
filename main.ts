@@ -3,6 +3,13 @@ input.onButtonPressed(Button.A, function () {
     Number2 += 1
 })
 input.onButtonPressed(Button.AB, function () {
+	
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showNumber(Number2)
+    Number2 += -1
+})
+input.onGesture(Gesture.Shake, function () {
     let Guess = 0
     if (Guess == Number2) {
         basic.showString("CORRECT")
@@ -11,13 +18,6 @@ input.onButtonPressed(Button.AB, function () {
         basic.showString("INCORRECT")
         basic.showIcon(IconNames.No)
     }
-})
-input.onButtonPressed(Button.B, function () {
-    basic.showNumber(Number2)
-    Number2 += -1
-})
-input.onGesture(Gesture.Shake, function () {
-    control.reset()
 })
 let Number2 = 0
 basic.showString("GTSP")
